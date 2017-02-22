@@ -1,0 +1,41 @@
+{
+  "tests": "./tests/mobile/*login_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://localhost",
+      "restart": true,
+      "browser": "chrome",
+      "windowSize": "415x730",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 8_0_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12A405 Safari/600.1.4"
+          ]
+        },
+        "mobileEmulationEnabled": true
+      },
+      "coloredLogs": true
+    }
+  },
+  "include": {
+    "I": "./helpers/steps_file.js",
+    "loginPage": "./helpers/mobile/pages/Login.js",
+    "homePage": "./helpers/mobile/pages/Home.js",
+    "registrationPage": "./helpers/mobile/pages/Registration.js",
+    "termsConditionsPage": "./helpers/mobile/pages/TermsConditions.js",
+    "newLookPopupFragment": "./helpers/mobile/fragments/newLookPopup.js",
+    "promoPopupFragment": "./helpers/mobile/fragments/promoPopup.js"
+  },
+  "bootstrap": false,
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./output",
+      "enableCharts": true,
+      "reportTitle": "Spartan Reporter"
+    }
+  },
+  "name": "Spartan"
+}
