@@ -1,0 +1,32 @@
+{
+  "tests": "./tests/web/*login_test.js",
+  "timeout": 10000,
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "http://localhost",
+      "restart": true,
+      "browser": "chrome",
+      "windowSize": "maximize",
+      "coloredLogs": true
+    }
+  },
+  "include": {
+    "I": "./helpers/steps_file.js",
+    "personalDetailsPage": "./helpers/web/pages/PersonalDetails.js",
+    "homePage": "./helpers/web/pages/Home.js",
+    "registrationPage": "./helpers/web/pages/Registration.js",
+    "termsConditionsPage": "./helpers/web/pages/TermsConditions.js",
+    "LoginFormFragment": "./helpers/web/fragments/LoginForm.js",
+    "promoPopupFragment": "./helpers/web/fragments/promoPopup.js"
+  },
+  "bootstrap": false,
+  "mocha": {
+    "reporterOptions": {
+      "reportDir": "./output",
+      "enableCharts": true,
+      "reportTitle": "Spartan Reporter"
+    }
+  },
+  "name": "Spartan"
+}
