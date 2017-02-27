@@ -23,22 +23,25 @@ module.exports = {
     loggedUser: 'Asd Asd (product_live_de'
   },
   screen: {
-    splashScreen: '[id="loading"]'
+    splashScreen: '[id="loading"]',
+    root: '[class="dialog-container"] [class="window fadein"]'
   },
 
   hideSplashScreen() {
-    I.waitForInvisible(this.screen.splashScreen, 30);
+    I.waitForInvisible(this.screen.splashScreen);
+    I.waitForInvisible(this.screen.root);
   },
   dismissNewLookDialog() {
     newLookPopupFragment.confirm();
   },
   goToLogin(){
     I.click(this.buttons.login);
+    I.waitForVisible('[name="login"]');
   },
   goToMyAccount(){
     I.click(this.buttons.myAccount);
   },
   verifyUser(){
-    I.waitForText(this.texts.loggedUser, 5);
+    I.waitForText(this.texts.loggedUser);
   }
 };

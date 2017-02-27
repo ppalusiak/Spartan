@@ -16,6 +16,6 @@ module.exports = {
 
   // methods
   checkPage() {
-    I.waitForText(this.texts.title, 15);
+    I.waitForText(this.texts.title);
   }
 };

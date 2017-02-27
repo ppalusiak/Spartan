@@ -30,7 +30,7 @@ module.exports = {
   },
   close() {
     I.click(this.closeButton);
-    I.dontSeeElement(this.modalPopup, 5);
+    I.dontSeeElement(this.modalPopup);
   },
   goToRegistration() {
     I.click(this.signUpButton);

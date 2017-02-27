@@ -20,10 +20,10 @@ module.exports = {
 
   // methods
   sendLoginForm() {
-    I.waitForVisible(this.fields.username, 5);
+    I.waitForVisible(this.fields.username);
     I.fillField(this.fields.username, 'product_live_de');
     I.fillField(this.fields.password, 'qwop1010');
     I.click(this.buttons.loginButton);
-    I.waitForText('My account', 10);
+    I.waitForText('My account');
   }
 };

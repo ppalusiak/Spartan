@@ -17,9 +17,9 @@ module.exports = {
     },
 
     verifyForm() {
-        I.waitForElement(this.forms.personalDetails, 5);
+        I.waitForElement(this.forms.personalDetails);
     },
     verifyUser() {
-        I.waitForText(this.texts.username, 5);
+        I.waitForText(this.texts.username);
     }
 };

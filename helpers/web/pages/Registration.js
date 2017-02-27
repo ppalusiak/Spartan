@@ -24,7 +24,7 @@ module.exports = {
 
   // methods
   checkPage() {
-    I.waitForText(this.texts.title, 15);
+    I.waitForText(this.texts.title);
     I.seeElement(this.fields.username);
     I.seeElement(this.fields.email);
     I.seeElement(this.fields.password);

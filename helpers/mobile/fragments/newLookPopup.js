@@ -18,7 +18,9 @@ module.exports = {
 
   // methods
   confirm() {
-    if (I.seeElement(this.okButton)) {
+      I.waitForInvisible(this.root);
+      I.waitForInvisible(this.loader);
+    /*if (I.seeElement(this.okButton)) {
       I.click(this.okButton);
       I.waitForInvisible(this.root, 10);
       I.waitForInvisible(this.loader, 10);
@@ -29,7 +31,7 @@ module.exports = {
     } else {
       I.waitForInvisible(this.root, 10);
       I.waitForInvisible(this.loader, 10);
-    }
+    }*/
 
     //I.waitForVisible(this.okButton);
 

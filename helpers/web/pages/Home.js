@@ -27,6 +27,6 @@ module.exports = {
     I.click(this.buttons.personalDetails);
   },
   verifyUser(){
-    I.waitForText(this.texts.loggedUser, 5);
+    I.waitForText(this.texts.loggedUser);
   }
 };
