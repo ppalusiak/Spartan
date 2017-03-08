@@ -19,11 +19,10 @@ module.exports = {
   },
 
   // methods
-  sendLoginForm() {
+  sendLoginForm(username, password) {
     I.waitForVisible(this.fields.username);
-    I.fillField(this.fields.username, 'product_live_de');
-    I.fillField(this.fields.password, 'qwop1010');
+    I.fillField(this.fields.username, username);
+    I.fillField(this.fields.password, password);
     I.click(this.buttons.loginButton);
-    I.waitForText('My account');
   }
 };

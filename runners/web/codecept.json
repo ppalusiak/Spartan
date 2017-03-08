@@ -1,5 +1,5 @@
 {
-  "tests": "./tests/web/*login_test.js",
+  "tests": "./tests/web/*welcomeBonus_test.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
@@ -10,6 +10,9 @@
       "windowSize": "maximize",
       "waitForTimeout": 30000,
       "coloredLogs": true
+    },
+    "MyHelper": {
+      "require": "./helpers/custom_methods/custom_helper.js"
     }
   },
   "include": {

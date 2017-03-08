@@ -10,8 +10,8 @@ module.exports = {
 
     // locators
     fields: {
-        username: 'input[name="username"]',
-        email: '',
+        username: 'input[name="login"]',
+        email: 'input[name="email"]',
         password: 'input[name="password"]'
     },
     buttons: {

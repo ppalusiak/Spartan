@@ -6,6 +6,9 @@
   },
   "scripts": {
     "mobile": "codeceptjs run --config ./runners/mobile/codecept.json --steps",
-    "web": "codeceptjs run --config ./runners/web/codecept.json --steps"
+    "native": "codeceptjs run --config ./runners/appium_poc/codecept.json --steps",
+    "web": "codeceptjs run --config ./runners/web/codecept.json --steps",
+    "all": "npm run mobile && npm run web"
+
   }
 }

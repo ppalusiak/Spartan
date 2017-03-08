@@ -11,15 +11,15 @@ module.exports = {
 
   // locators
   fields: {
-    username: 'input[name="username"]',
-    email: '',
-    password: 'input[name="password"]'
+    username: 'input[id="registerForm:login"]',
+    email: 'input[id="registerForm:email"]',
+    password: 'input[id="registerForm:password"]'
   },
   buttons: {
-    submitButton: '[type="submit"]'
+    submitButton: '[id="registerForm:registerButton"]'
   },
   texts: {
-    title: 'Registration'
+    title: 'Account Details'
   },
 
   // methods

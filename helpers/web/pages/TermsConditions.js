@@ -1,21 +1,24 @@
-
 'use strict';
 
 let I;
 
 module.exports = {
 
-  _init() {
-    I = actor();
-  },
+    _init() {
+        I = actor();
+    },
 
-  // locators
-  texts: {
-    title: 'Terms & Conditions',
-  },
+    // locators
+    texts: {
+        title: 'Tipico Welcome Bonus Terms and Conditions',
+    },
+    sections: {
+        termsCondSection: '[id*="bonus_terms"]',
+    },
 
-  // methods
-  checkPage() {
-    I.waitForText(this.texts.title);
-  }
+    // methods
+    checkPage() {
+        I.waitForElement(this.sections.termsCondSection);
+        I.see(this.texts.title);
+    }
 };
