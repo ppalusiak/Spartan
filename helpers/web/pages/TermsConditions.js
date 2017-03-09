@@ -10,7 +10,7 @@ module.exports = {
 
     // locators
     texts: {
-        title: 'Tipico Welcome Bonus Terms and Conditions',
+        title: 'Sportsbetting Bonus',
     },
     sections: {
         termsCondSection: '[id*="bonus_terms"]',

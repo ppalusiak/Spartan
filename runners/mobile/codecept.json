@@ -1,5 +1,5 @@
 {
-  "tests": "./tests/mobile/*incomplete_registration_test.js",
+  "tests": "./tests/mobile/*welcomeBonus_test.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {

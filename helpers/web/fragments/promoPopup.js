@@ -30,6 +30,13 @@ module.exports = {
         I.seeElement(this.signUpButton);
         I.seeElement(this.tncButton);
     },
+    checkPromoVisible(visible) {
+        if (visible) {
+            I.seeElement(this.modalPopup);
+        } else {
+            I.dontSeeElement(this.modalPopup);
+        }
+    },
     close() {
         I.click(this.closeButton);
         I.waitForInvisible(this.modalOverlay);
