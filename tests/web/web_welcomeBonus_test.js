@@ -17,15 +17,13 @@ Scenario('Promo Layout', (I, promoPopupFragment) => {
     });
 });
 
-xScenario('Promo for German language', (I, homePage, promoPopupFragment) => {
-    let domains = ["https://web-spartans.tipdev.com", "https://web-spartans-de.tipdev.com", "https://web-spartans-de-sh.tipdev.com", "https://web-spartans-at.tipdev.com"];
+Scenario('Promo for German language', (I, homePage, promoPopupFragment) => {
+    let domains = ["https://web-staging.tipdev.com", "https://web-staging-de.tipdev.com", "https://web-staging-de-sh.tipdev.com", "https://web-staging-at.tipdev.com"];
     domains.forEach(function (element) {
         I.amOnPage(element);
         promoPopupFragment.checkLayout();
         promoPopupFragment.close();
-        I.waitForVisible('[id="selected_lang"]');
-        I.click('[id="selected_lang"]');
-        I.click('[id="lang_layer"] ul:not([class="hide"]) [onclick*="de"]');
+        homePage.changeLanguage(element, "DE");
         I.clearLocalStorage();
         I.refreshPage();
         promoPopupFragment.checkLayout();

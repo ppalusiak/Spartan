@@ -39,22 +39,19 @@ Scenario('Terms and Conditions button -> T&C section', (I, homePage, promoPopupF
     termsConditionsPage.checkPage();
 });
 
-Scenario('Welcome promo is not displayed on navigation through the app / user logged out', (I, homePage, loginPage, promoPopupFragment) => {
+Scenario('Welcome promo is not displayed on navigation through the app / user logged out', (I, homePage, loginPage, footerPage, promoPopupFragment) => {
     I.amOnPage('https://mobile-staging.tipdev.com');
     homePage.hideSplashScreen();
     promoPopupFragment.checkLayout();
     promoPopupFragment.close();
     homePage.hideSplashScreen();
     homePage.goToLogin();
-    I.click('[onclick*="login/register"]');
-    I.waitForVisible('[name="country"]');
-    I.click('[id="page1"] [onclick*="home"]');
-    homePage.hideSplashScreen();
-    I.waitForVisible('[class="barbottomleft arrow "][onclick="go(\'login\')"]');
+    loginPage.goToRegistration();
+    footerPage.goToHome();
     promoPopupFragment.checkPromoVisible(false);
 });
 
-Scenario('Welcome promo is not displayed on domain redirection', (I, homePage, loginPage, promoPopupFragment) => {
+Scenario('Welcome promo is not displayed on domain redirection', (I, homePage, loginPage, switchPage, promoPopupFragment) => {
     I.amOnPage('https://mobile-staging.tipdev.com');
     homePage.hideSplashScreen();
     promoPopupFragment.checkLayout();
@@ -62,8 +59,6 @@ Scenario('Welcome promo is not displayed on domain redirection', (I, homePage, l
     homePage.hideSplashScreen();
     homePage.goToLogin();
     loginPage.sendLoginForm('mobile_de_01', 'B00Xware');
-    I.waitForVisible('[onclick="international(false)"]');
-    I.click('[onclick="international(false)"]');
-    I.waitForVisible('[id="page1"] [onclick="go(\'account\')"]');
+    switchPage.goToGermanOffer();
     promoPopupFragment.checkPromoVisible(false);
 });

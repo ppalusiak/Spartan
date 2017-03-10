@@ -1,6 +1,6 @@
 'use strict';
 
-let I, promoPopupFragment;
+let I, promoPopupFragment,myAccountPage;
 
 module.exports = {
 
@@ -9,12 +9,16 @@ module.exports = {
 
         promoPopupFragment = require('../fragments/promoPopup.js');
         promoPopupFragment._init();
+
+        myAccountPage = require('../pages/MyAccount.js');
+        myAccountPage._init();
     },
 
     // locators
     buttons: {
         login: '[class="barbottomleft arrow "][onclick="go(\'login\')"]',
-        myAccount: '[class="barmiddleright arrow "][onclick="go(\'account\')"]'
+        myAccount: '[class="barmiddleright arrow "][onclick="go(\'account\')"]',
+        sportBets: '[class*="barmiddleleft arrow "][onclick="go(\'sports/all\')"]'
     },
     texts: {
         loggedUser: 'Asd Asd (product_live_de'
@@ -37,6 +41,7 @@ module.exports = {
     goToMyAccount(){
         I.waitForVisible(this.buttons.myAccount);
         I.click(this.buttons.myAccount);
+        I.waitForVisible(myAccountPage.buttons.accountStatementButton);
     },
     verifyUser(){
         I.waitForText(this.texts.loggedUser);

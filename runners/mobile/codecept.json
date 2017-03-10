@@ -31,6 +31,11 @@
     "homePage": "./helpers/mobile/pages/Home.js",
     "registrationPage": "./helpers/mobile/pages/Registration.js",
     "termsConditionsPage": "./helpers/mobile/pages/TermsConditions.js",
+    "myAccountPage": "./helpers/mobile/pages/MyAccount.js",
+    "informationPage": "./helpers/mobile/pages/Information.js",
+    "footerPage": "./helpers/mobile/pages/Footer.js",
+    "betsPage": "./helpers/mobile/pages/Bets.js",
+    "switchPage": "./helpers/mobile/pages/SwitchDomain.js",
     "promoPopupFragment": "./helpers/mobile/fragments/promoPopup.js"
   },
   "bootstrap": false,

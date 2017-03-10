@@ -20,6 +20,9 @@ module.exports = {
     texts: {
         title: 'Registration'
     },
+    select: {
+        country: '[name="country"]'
+    },
 
     // methods
     checkPage() {

@@ -12,7 +12,7 @@
       "desiredCapabilities": {
         "platformName": "Android",
         "deviceName": "virtual_device_android",
-        "app": "/Users/michaltrunek/apks/app-spartans-debug.apk",
+        "app": "/Users/michaltrunek/apks/app-production-release.apk",
         "autoWebview": true,
         "avd": "virtual_device_4"
       },
@@ -29,7 +29,6 @@
     "homePage": "./helpers/mobile/pages/Home.js",
     "registrationPage": "./helpers/mobile/pages/Registration.js",
     "termsConditionsPage": "./helpers/mobile/pages/TermsConditions.js",
-    "newLookPopupFragment": "./helpers/mobile/fragments/newLookPopup.js",
     "promoPopupFragment": "./helpers/mobile/fragments/promoPopup.js"
   },
   "bootstrap": false,
