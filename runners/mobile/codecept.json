@@ -1,5 +1,5 @@
 {
-  "tests": "./tests/mobile/*welcomeBonus_test.js",
+  "tests": "./tests/mobile/*incomplete_registration_test.js",
   "timeout": 10000,
   "output": "./output",
   "helpers": {
@@ -36,7 +36,9 @@
     "footerPage": "./helpers/mobile/pages/Footer.js",
     "betsPage": "./helpers/mobile/pages/Bets.js",
     "switchPage": "./helpers/mobile/pages/SwitchDomain.js",
-    "promoPopupFragment": "./helpers/mobile/fragments/promoPopup.js"
+    "firstDepositPage": "./helpers/mobile/pages/FirstDeposit.js",
+    "promoPopupFragment": "./helpers/mobile/fragments/promoPopup.js",
+    "cancelRegistrationFragment": "./helpers/mobile/fragments/cancelRegistrationPopup.js"
   },
   "bootstrap": false,
   "mocha": {

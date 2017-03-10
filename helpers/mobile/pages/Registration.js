@@ -10,18 +10,41 @@ module.exports = {
 
     // locators
     fields: {
+        // first step
         username: 'input[name="login"]',
         email: 'input[name="email"]',
-        password: 'input[name="password"]'
+        password: 'input[name="password"]',
+        confirmPassword: 'input[name="passwordConfirm"]',
+
+        // second step
+        firstName: '[name="firstName"]',
+        surname: '[name="lastName"]',
+        streetAndHouseNumber: '[name="street"]',
+        city: '[name="city"]',
+        postcode: '[name="zipCode"]',
     },
     buttons: {
-        submitButton: '[type="submit"]'
+        // first step
+        submitButton: '[class="form"] [type="submit"]',
+
+        // second step
+        completeRegistrationButton: '[type="submit"]'
     },
     texts: {
         title: 'Registration'
     },
     select: {
-        country: '[name="country"]'
+        // first step
+        country: '[name="country"]',
+        birthdayDay: '[name="birthday.day"]',
+        birthdayMonth: '[name="birthday.month"]',
+        birthdayYear: '[name="birthday.year"]',
+
+        // second step
+        salutation: '[name="salutation"]'
+    },
+    checkboxes: {
+        terms: '[name="terms"]'
     },
 
     // methods

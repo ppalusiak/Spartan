@@ -18,7 +18,7 @@ module.exports = {
     },
     buttons: {
         loginButton: '.submit',
-        registerButton: '[onclick*="login/register"]'
+        registerButton: '[class="form"] [onclick*="login/register"]'
     },
 
     // methods
@@ -29,6 +29,7 @@ module.exports = {
         I.click(this.buttons.loginButton);
     },
     goToRegistration() {
+        I.waitForVisible(this.fields.username);
         I.click(this.buttons.registerButton);
         I.waitForVisible(registrationPage.select.country);
     }

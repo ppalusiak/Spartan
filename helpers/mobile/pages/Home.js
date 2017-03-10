@@ -1,6 +1,6 @@
 'use strict';
 
-let I, promoPopupFragment,myAccountPage;
+let I, promoPopupFragment, myAccountPage, loginPage;
 
 module.exports = {
 
@@ -12,6 +12,9 @@ module.exports = {
 
         myAccountPage = require('../pages/MyAccount.js');
         myAccountPage._init();
+
+        loginPage = require('../pages/Login.js');
+        loginPage._init();
     },
 
     // locators
@@ -36,7 +39,7 @@ module.exports = {
     },
     goToLogin(){
         I.click(this.buttons.login);
-        I.waitForVisible('[name="login"]');
+        I.waitForVisible(loginPage.fields.username);
     },
     goToMyAccount(){
         I.waitForVisible(this.buttons.myAccount);
