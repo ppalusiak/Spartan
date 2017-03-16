@@ -33,7 +33,7 @@ module.exports = {
         I.waitForVisible(this.buttons.languageSelectButton);
         I.click(this.buttons.languageSelectButton);
         switch (environment) {
-            case "https://web-staging.tipdev.com":
+            case "https://web-hotfix.tipdev.com":
 
                 // language selection
                 switch (language) {
@@ -61,7 +61,7 @@ module.exports = {
                 }
 
                 break;
-            case "https://web-staging-de.tipdev.com":
+            case "https://web-hotfix-de.tipdev.com":
 
                 // language selection
                 switch (language) {
@@ -76,7 +76,7 @@ module.exports = {
                         break;
                 }
                 break;
-            case "https://web-staging-de-sh.tipdev.com":
+            case "https://web-hotfix-de-sh.tipdev.com":
 
                 // language selection
                 switch (language) {
@@ -91,7 +91,7 @@ module.exports = {
                         break;
                 }
                 break;
-            case "https://web-staging-at.tipdev.com":
+            case "https://web-hotfix-at.tipdev.com":
 
                 // language selection
                 switch (language) {

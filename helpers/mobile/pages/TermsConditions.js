@@ -11,7 +11,7 @@ module.exports = {
 
   // locators
   texts: {
-    title: 'Terms & Conditions',
+    title: 'Bonus conditions',
   },
 
   // methods

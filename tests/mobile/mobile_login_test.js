@@ -9,6 +9,6 @@ Scenario('Tipico mobile login test', (I, homePage, loginPage) => {
     homePage.goToMyAccount();
     homePage.verifyUser();
     I.clearLocalStorage();
-    I.refreshPage()
+    I.refreshPage();
 });
 

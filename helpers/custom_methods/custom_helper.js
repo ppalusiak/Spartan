@@ -12,14 +12,19 @@ class MyHelper extends Helper {
 
     checkIfElementPresentAndDisplayed(elementToCheck) {
         let client = this.helpers['WebDriverIO'].browser;
-        client.isVisible(elementToCheck).then(function(func) {
-            return func;
+        return client.isVisible(elementToCheck).then(function(value) {
+            return value;
         });
     };
 
     clearLocalStorage() {
         let client = this.helpers['WebDriverIO'].browser;
         return client.localStorage('DELETE');
+    };
+
+    deleteCookie() {
+        let client = this.helpers['WebDriverIO'].browser;
+        return client.deleteCookie();
     };
 
     refreshPage() {
