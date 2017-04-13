@@ -6,7 +6,7 @@
   },
   "scripts": {
     "mobile": "codeceptjs run --config ./runners/mobile/codecept.conf.js --steps",
-    "native": "codeceptjs run --config ./runners/appium_poc/codecept.json --steps",
+    "native": "codeceptjs run --config ./runners/appium_poc/codecept.conf.js --steps",
     "web": "codeceptjs run --config ./runners/web/codecept.json --steps",
     "all": "npm run mobile && npm run web"
 
