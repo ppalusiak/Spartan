@@ -1,11 +1,11 @@
 {
   "devDependencies": {
-    "codeceptjs": "^0.5.0",
+    "codeceptjs": "^0.5.1",
     "gulp": "^3.9.1",
     "gulp-run": "^1.7.1"
   },
   "scripts": {
-    "mobile": "codeceptjs run --config ./runners/mobile/codecept.json --steps",
+    "mobile": "codeceptjs run --config ./runners/mobile/codecept.conf.js --steps",
     "native": "codeceptjs run --config ./runners/appium_poc/codecept.json --steps",
     "web": "codeceptjs run --config ./runners/web/codecept.json --steps",
     "all": "npm run mobile && npm run web"
