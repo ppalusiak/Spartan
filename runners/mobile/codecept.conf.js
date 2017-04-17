@@ -2,9 +2,14 @@ exports.config = {
     tests: './tests/mobile/*welcomeBonus_test.js',
     timeout: 30000,
     output: './output',
+
+    params: {
+        env: 'prod'
+    },
+
     helpers: {
         WebDriverIO: {
-            url: 'http://localhost',
+            url: 'https://mobile-hotfix.tipdev.com',
             restart: true,
             browser: 'chrome',
             windowSize: '415x730',
@@ -21,7 +26,9 @@ exports.config = {
             coloredLogs: true
         },
         MyHelper: {
-            require: './helpers/custom_methods/custom_helper.js'
+            require: './helpers/custom_methods/MyHelper.js',
+            env: 'prod',
+            defaultUrl: 'https://mobile-hotfix.tipdev.com'
         }
     },
     include: {
@@ -47,5 +54,8 @@ exports.config = {
             reportTitle: 'Spartan Reporter'
         }
     },
-    name: 'Spartan'
+    name: 'Spartan',
+
+
+
 };

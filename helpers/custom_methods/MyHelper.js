@@ -2,6 +2,7 @@
 let Helper = codecept_helper;
 class MyHelper extends Helper {
     // before/after hooks
+
     _before() {
         // remove if not used
     }
