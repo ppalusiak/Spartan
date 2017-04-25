@@ -1,5 +1,5 @@
 exports.config = {
-    tests: './tests/mobile/*welcomeBonus_test.js',
+    tests: './tests/mobile/*login_test.js',
     timeout: 30000,
     output: './output',
 
