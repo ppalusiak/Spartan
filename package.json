@@ -2,7 +2,8 @@
   "devDependencies": {
     "codeceptjs": "^0.5.1",
     "gulp": "^3.9.1",
-    "gulp-run": "^1.7.1"
+    "gulp-run": "^1.7.1",
+    "webdriverio": "^4.7.1"
   },
   "scripts": {
     "mobile": "codeceptjs run --config ./runners/mobile/codecept.conf.js --steps",
